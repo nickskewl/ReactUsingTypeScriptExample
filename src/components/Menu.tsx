@@ -16,7 +16,7 @@ function Menu({
           recipeName={m.name}
           ingredients={m.ingredients}
           steps={m.steps}
-          key={m.id}
+          key={m.name}
         />
       ))}
     </div>

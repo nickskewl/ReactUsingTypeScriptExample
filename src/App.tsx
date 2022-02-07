@@ -2,42 +2,91 @@ import "./App.css";
 import Menu from "./components/Menu";
 
 function App() {
-  let menu = [
+  const data = [
     {
-      id: 1,
       name: "Baked Salmon",
       ingredients: [
-        "Salmon",
-        "Pine Nuts",
-        "Butter",
-        "Yellow Squash",
-        "Olive Oil",
-        "Garlic",
+        {
+          name: "Salmon",
+          amount: 1,
+          measurement: "l lb",
+        },
+        {
+          name: "Pine Nuts",
+          amount: 1,
+          measurement: "cup",
+        },
+        {
+          name: "Butter Lettuce",
+          amount: 2,
+          measurement: "cups",
+        },
+        {
+          name: "Yellow Squash",
+          amount: 1,
+          measurement: "med",
+        },
+        {
+          name: "Olive Oil",
+          amount: 0.5,
+          measurement: "cup",
+        },
+        {
+          name: "Garlic",
+          amount: 3,
+          measurement: "cloves",
+        },
       ],
       steps: [
-        "Preheat the oven to 350 degress",
-        "Spread the olive oil",
-        "Add the salmon, garlic and pine nuts",
-        "Bake for 15 min",
-        "Add the yellow squash",
-        "Remove from oven",
+        "Preheat the oven to 350 degrees.",
+        "Spread the olive oil around a glass baking dish.",
+        "Add the salmon, garlic, and pine nuts to the dish.",
+        "Bake for 15 minutes.",
+        "Add the yellow squash and put back in the oven for 30 mins.",
+        "Remove from oven and let cool for 15 minutes. Add the lettuce and serve.",
       ],
     },
     {
-      id: 2,
       name: "Fish Tacos",
-      ingredients: ["Whitefish", "Cheese", "Lettuce", "Tomatoes", "Tortillas"],
+      ingredients: [
+        {
+          name: "Whitefish",
+          amount: 1,
+          measurement: "l lb",
+        },
+        {
+          name: "Cheese",
+          amount: 1,
+          measurement: "cup",
+        },
+        {
+          name: "Iceberg Lettuce",
+          amount: 2,
+          measurement: "cups",
+        },
+        {
+          name: "Tomatoes",
+          amount: 2,
+          measurement: "large",
+        },
+        {
+          name: "Tortillas",
+          amount: 3,
+          measurement: "med",
+        },
+      ],
       steps: [
-        "Cook the fish on the grill until hot",
-        "Place the fish on the 3 tortillas",
-        "Top them with lettuce, tomatoes, and cheese",
+        "Cook the fish on the grill until hot.",
+        "Place the fish on the 3 tortillas.",
+        "Top them with lettuce, tomatoes, and cheese.",
       ],
     },
   ];
   let title = "Delicious Recipes";
+
   return (
     <div>
-      <Menu title={title} menu={menu} />
+      <Menu title={title} menu={data} />
     </div>
   );
 }

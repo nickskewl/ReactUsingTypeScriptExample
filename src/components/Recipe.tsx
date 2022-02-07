@@ -13,8 +13,8 @@ function Recipe({
   return (
     <div>
       <h3> {recipeName}</h3>
-      {ingredients.map((item: string) => (
-        <ul key={item}>{<Ingredients item={item} />}</ul>
+      {ingredients.map((item: any) => (
+        <ul key={item.name}>{<Ingredients item={item.name} />}</ul>
       ))}
       <h2>Cooking Instructions</h2>
       {steps.map((step: string) => (
