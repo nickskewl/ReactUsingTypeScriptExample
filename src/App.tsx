@@ -1,8 +1,9 @@
 import "./App.css";
 import Menu from "./components/Menu";
+import { IRecipe } from "./model/IRecipe";
 
 function App() {
-  const data = [
+  const data: IRecipe[] = [
     {
       name: "Baked Salmon",
       ingredients: [

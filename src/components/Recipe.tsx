@@ -1,3 +1,4 @@
+import { IIngredient } from "../model/IRecipe";
 import Ingredients from "./Ingredients";
 import Steps from "./Steps";
 
@@ -7,13 +8,13 @@ function Recipe({
   steps,
 }: {
   recipeName: string;
-  ingredients: Array<string>;
+  ingredients: IIngredient[];
   steps: Array<string>;
 }) {
   return (
     <div>
       <h3> {recipeName}</h3>
-      {ingredients.map((item: any) => (
+      {ingredients.map((item: IIngredient) => (
         <ul key={item.name}>{<Ingredients item={item.name} />}</ul>
       ))}
       <h2>Cooking Instructions</h2>
